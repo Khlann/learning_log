@@ -18,6 +18,7 @@ from typing import List
 
 # print(permute(input))
 
+
 def backtracking(list, level, result):
     if level == len(list)-1:
         result.append(list[:])
