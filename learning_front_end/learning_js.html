@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜单展开收缩效果</title>
+    <style>
+        /* 菜单容器样式 */
+       .menu-container {
+            width: 200px;
+            border: 1px solid #ccc;
+        }
+
+        /* 菜单项标题样式 */
+       .menu-title {
+            padding: 10px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        /* 子菜单样式 */
+       .sub-menu {
+            display: none;
+            padding: 10px;
+            list-style-type: none;
+            margin: 0;
+        }
+
+        /* 子菜单项样式 */
+       .sub-menu li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-container">
+        <div class="menu-title" onclick="toggleMenu(this)">菜单 1</div>
+        <ul class="sub-menu">
+            <li>子菜单 1-1</li>
+            <li>子菜单 1-2</li>
+            <li>子菜单 1-3</li>
+        </ul>
+        <div class="menu-title" onclick="toggleMenu(this)">菜单 2</div>
+        <ul class="sub-menu">
+            <li>子菜单 2-1</li>
+            <li>子菜单 2-2</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleMenu(menuTitle) {
+            // 获取当前菜单项对应的子菜单
+            const subMenu = menuTitle.nextElementSibling;
+            // 判断子菜单的显示状态
+            if (subMenu.style.display === 'none') {
+                // 如果隐藏则显示
+                subMenu.style.display = 'block';
+            } else {
+                // 如果显示则隐藏
+                subMenu.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

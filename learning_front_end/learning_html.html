@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width = device-width, initial-scale=1.0">
+    <title>Haolan Kang</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        /* 左侧栏 */
+        .left-column {
+            flex: 1;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* 右侧栏 */
+        .right-column {
+            flex: 2;
+            background-color: #e0e0e0;
+            padding: 20px;
+        }
+        .sidebar {
+            float: left;
+            width: 20%;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        .large-text {
+            font-size: 24px;
+        }
+        #special-text {
+            color: red;
+        }
+        /* *{
+            margin: 10;
+            padding: 10;
+        } */
+        .box2 {
+            
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 5px solid rgb(206, 255, 132);
+            box-sizing: border-box;
+        }
+        /* 新的 Flex 容器 */
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 25vh;
+        }
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+        ul li:first-child {
+            color: green;
+        }
+        p::before {
+            content: ">> ";
+            color: red;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+        }
+        .float-right {
+            float: right;
+        }
+        .float-left {
+            float: left;
+        }
+        .parent {
+            border: 1px solid black;
+        }
+
+        .child {
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+            float: left;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<nav>
+    <ul>
+        <li><a href="#">444首页</a></li>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">产品中心</a></li>
+        <li><a href="#">联系我们</a></li>
+    </ul>
+</nav>
+<article>
+    <header>
+        <h2>新闻标题</h2>
+        <p>发布时间：2024-01-01</p>
+    </header>
+    <p>新闻的具体内容...</p>
+    <footer>
+        <p>作者：张三</p>
+    </footer>
+</article>
+<aside>
+    <h3>相关推荐</h3>
+    <ul>
+        <li><a href="#">推荐文章 1</a></li>
+        <li><a href="#">推荐文章 2</a></li>
+    </ul>
+</aside>
+<body>
+    <div class="centered-container">
+        <div class="box2">使用 border-box，宽度和高度包含内容区、内边距和边框。</div>
+    </div>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="clear"></div>
+    </div>
+    <p>这是一个段落，现在父元素高度正常。</p>
+</body>
+</body>
+    <div class="container">
+        <div class="left-column">
+            <p>这是左侧栏的内容。</p>
+        </div>
+        <div class="right-column">
+            
+            <p class="highlight large-text">这是右侧栏的内容。</p>
+            <p id="special-text">这是右侧栏的内容。</p>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li id="special-text"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <h1>
+        Greeting, it's arlen's home!
+    </h1>
+    <p>
+        <div class="box float-right">向左浮动</div>
+        <p>这是一个段落，用于展示浮动元素对周围元素的影响。</p>
+        <hr>
+        </hr>
+        usage of "&lt;br&gt;"<br>
+        usage of "&lt;hr&gt;"<br>
+        <hr>
+        </hr>
+        continue<br>
+        usage of 列表：<br>
+        <ol>
+            <li>
+                1
+            </li>
+            <li>
+                2
+            </li>
+            <li>
+                3
+            </li>
+        </ol>
+        <br>
+        无序列表：<br>
+        <ul>
+            <li>
+                1
+            </li>
+            <li>
+                2
+            </li>
+            <li>
+                3
+            </li>
+        </ul>
+        <br>
+        嵌套列表：<br>
+        <li>
+            <ul>
+                <li>
+                    1
+                </li>
+                <li>
+                    2
+                </li>
+                <li>
+                    3
+                </li>
+            </ul>
+        </li>
+        <br>
+        <p>点击下面的链接访问百度：</p>
+        <a href="https://www.baidu.com">百度</a><br>
+        <img src="image.png" alt="示例图片" width="300" height="200" title="这是一张图片">
+    </p>
+    <form>
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">密码：</label>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="提交">
+    </form>
+    <form>
+        <p>请选择您的性别：</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">男</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">女</label>
+    </form>
+    <form>
+        <p>请选择您喜欢的水果：</p>
+        <input type="checkbox" id="apple" name="fruits" value="apple">
+        <label for="apple">苹果</label>
+        <input type="checkbox" id="banana" name="fruits" value="banana">
+        <label for="banana">香蕉</label>
+        <input type="checkbox" id="orange" name="fruits" value="orange">
+        <label for="orange">橙子</label>
+    </form>
+    <form>
+        <label for="city">请选择您所在的城市：</label>
+        <select id="city" name="city">
+            <option value="beijing">北京</option>
+            <option value="shanghai">上海</option>
+            <option value="guangzhou">广州</option>
+            <option value="shenzhen">深圳</option>
+        </select>
+    </form>
+    <form>
+        <label for="message">请留言：</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="请输入您的留言内容"></textarea>
+    </form>
+    <form>
+        <input type="text" id="name" name="name" placeholder="请输入您的姓名">
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+        <button onclick="alert('自定义按钮被点击！')">自定义按钮</button>
+    </form>
+    <footer>
+        <p>版权所有 &copy; 2024 公司名称</p>
+        <p>联系方式：contact@example.com</p>
+    </footer>
+    <p style="color: blue; font-size: 18px;">这是一个使用内联样式的段落。</p>
+    
+</body>
+</html>
